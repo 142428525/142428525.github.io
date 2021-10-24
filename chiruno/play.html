@@ -76,19 +76,25 @@
 				a = Math.floor((Math.random()*4.5)+1);
 				b = Math.floor((Math.random()*4.5)+1);
 				choose_botton = Math.floor(Math.random()*(2));
+				var false_answer = Math.floor((Math.random()*9)+1)-1;
 				
 				document.getElementById('formula').innerHTML = a+' + '+b+' = ';
 				document.getElementById('points').innerHTML = '分数：'+point;
 				
+				while (false_answer == a+b)
+				{
+					false_answer = Math.floor((Math.random()*9)+1)-1;
+				}
+				
 				if (choose_botton == 0)
 				{
 					document.getElementById('left_botton').innerHTML = a+b;
-					document.getElementById('right_botton').innerHTML = Math.floor((Math.random()*9)+1)-1;
+					document.getElementById('right_botton').innerHTML = false_answer;
 				}
 				else
 				{
 					document.getElementById('right_botton').innerHTML = a+b;
-					document.getElementById('left_botton').innerHTML = Math.floor((Math.random()*9)+1)-1;
+					document.getElementById('left_botton').innerHTML = false_answer;
 				}
 			}
 			
