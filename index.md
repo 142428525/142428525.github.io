@@ -4,4 +4,6 @@
 # 子页面
 - [（默认）首页](https://142428525.github.io/index)
 - [咕霸百科全书](https://142428525.github.io/MGE/index)
-- [（空）短篇故事](https://142428525.github.io/short_story/)
+- [咕霸新闻](https://142428525.github.io/news)
+- [（空）短篇故事](https://142428525.github.io/short_story)
+- [小游戏](https://142428525.github.io/chiruno)
