@@ -90,11 +90,29 @@
 				{
 					document.getElementById('left_botton').innerHTML = a+b;
 					document.getElementById('right_botton').innerHTML = false_answer;
+				
+					if (a+b == 9)
+					{
+						document.getElementById('left_botton').innerHTML = '⑨';
+					}
+					if (false_answer == 9)
+					{
+						document.getElementById('right_botton').innerHTML = '⑨';
+					}
 				}
 				else
 				{
 					document.getElementById('right_botton').innerHTML = a+b;
 					document.getElementById('left_botton').innerHTML = false_answer;
+					
+					if (a+b == 9)
+					{
+						document.getElementById('right_botton').innerHTML = '⑨';
+					}
+					if (false_answer == 9)
+					{
+						document.getElementById('left_botton').innerHTML = '⑨';
+					}
 				}
 			}
 			
