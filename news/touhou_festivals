@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" href=" " />
+		<link rel="shortcut icon" href=" " /> 
+		<link rel="apple-touch-icon" href=" " />
+		<link rel="apple-touch-icon-precomposed" href=" " />
+		<title>咕霸新闻网</title>
+		<meta charset="utf-8"/>
+		<style>
+			.header {
+				background-color: #f1f1f1;
+				padding: 20px;
+				text-align: center;
+			}
+			body {
+				margin: 0 auto;
+				font-family: Tahoma, Verdana, Arial, sans-serif;
+			}
+			ul {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
+				border: 1px solid #e7e7e7;
+				background-color: #f3f3f3;
+			}
+		
+			li {
+				float: left;
+			}
+			
+			li a {
+				display: block;
+				color: #666;
+				text-align: center;
+				padding: 14px 16px;
+				text-decoration: none;
+			}
+		
+			li a:hover:not(.active) {
+				background-color: #ddd;
+			}
+		
+			li a.active {
+				color: white;
+				background-color: #4CAF50;
+			}
+			.footer {
+				background-color: #f1f1f1;
+				padding: 10px;
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<img src="img/news.png" alt="the Logo of the Multiverse Goodbar News" width="512" height="128" />
+		</div>
+		<ul>
+			<li><a class="active" href="index.html">主页</a></li>
+			<li><a href="../MGE/index.html">百科</a></li>
+			<li><a href="like.html">特辑</a></li>
+			<li><a href="..">退回</a></li>
+		</ul>
+		
+		<p id="festivals" style="text-align:center;"></p>
+		<!--- <p id="date"></p> --->
+		
+		<script>
+    	var days = {
+  			"years": {
+  			  "festivals": [
+  			    {
+							"id":"02",
+  			      "date": "1月2日",
+  			      "name": "秘封之日，秘封の日",
+  			      "ref": "1（ひ）2（ふう），秘封倶楽部（ひふうくらぶ）。"
+  			    },
+  			    {
+							"id":"04",
+  			      "date": "1月4日",
+  			      "name": "高丽野阿吽之日，あうんの日",
+  			      "ref": "1（い）4（し），石（いし），高丽野阿吽原本是博丽神社的石狮子（狛犬像）。"
+  			    }
+  			  ]
+  			},
+  			"months": {
+  			  "festivals": [
+  			    {
+					"id":"3",
+  			      "date": "每月3日",
+  			      "name": "萃香之日，萃香の日",
+  			      "ref": "伊吹萃香（いぶき すいか），酒（さけ），谐音3。腰间用锁链坠着三角锥(三角)、球(圆)、立方体(四角)三块有如砝码的金属几何体，3是砝码的数量。"
+  			    }
+  			  ]
+  			}
+			}
+			var output_text = "";
+			var date = new Date();
+			
+			for(i in days.years.festivals){
+				if((""+date.getMonth()+date.getDate())==days.years.festivals[i].id){
+					output_text += "<b>" + days.years.festivals[i].date + "</b> ";
+					output_text += days.years.festivals[i].name + "<br/>";
+					output_text += days.years.festivals[i].ref + "<br/><br/>";
+				}
+			}
+			for(i in days.months.festivals){
+				if((""+date.getDate())==days.months.festivals[i].id){
+					output_text += "<b>" + days.months.festivals[i].date + "</b> ";
+					output_text += days.months.festivals[i].name + "<br/>";
+					output_text += days.months.festivals[i].ref + "<br/><br/>";
+				}
+			}
+			document.getElementById("festivals").innerHTML = output_text;
+			
+			//document.getElementById("date").innerHTML = "每月" + date.getDate() + "日";
+			//document.getElementById("date").innerHTML = ""+date.getMonth()+date.getDate();//"每月" + 3 + "日";
+			//document.getElementById("date").innerHTML = (3 == days.months.festivals[0].id);
+    	</script>
+    
+		<div class="footer">
+			<p style="font-size:10px;color:#D0D0D0;">Copyright&copy;2021-∞   All Rights Reserved.版权所有。<br/><del>未经作者允许禁止转载</del><strong>作者允许了也不可以！！！</strong><br/>禁止转载/n次创作(n>1)/用于商业活动/用于非商业活动/等等。</p>
+		</div>
+	</body>
+</html>
