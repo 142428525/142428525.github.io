@@ -71,8 +71,7 @@
 			var xmlhttp = new XMLHttpRequest();
 			xmlhttp.onreadystatechange = function() {
 				if (this.readyState == 4 && this.status == 200) {
-					days = JSON.parse(this.responseText);
-					
+					var days = JSON.parse(this.responseText);
 					var output_text = "";
 					var date = new Date();
 					
