@@ -81,6 +81,11 @@
 							output_text += days.years.festivals[i].name + "<br/>";
 							output_text += days.years.festivals[i].ref + "<br/><br/>";
 						}
+						else{
+							output_text += "<b>" + date.getMonth()+1 + "月" + date.getDate() + "日</b> ";
+							output_text += "平和的一天<br/>";
+							output_text += "今天并没有节日呢。<br/><br/>";
+						}
 					}
 					for(i in days.months.festivals){
 						if((""+date.getDate())==days.months.festivals[i].id){
