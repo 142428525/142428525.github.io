@@ -100,7 +100,7 @@
 			var date = new Date();
 			
 			for(i in days.years.festivals){
-				if((""+date.getMonth()+date.getDate())==days.years.festivals[i].id){
+				if((""+(date.getMonth()+1)+date.getDate())==days.years.festivals[i].id){
 					output_text += "<b>" + days.years.festivals[i].date + "</b> ";
 					output_text += days.years.festivals[i].name + "<br/>";
 					output_text += days.years.festivals[i].ref + "<br/><br/>";
