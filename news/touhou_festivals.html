@@ -68,58 +68,35 @@
 		<!--- <p id="date"></p> --->
 		
 		<script>
-    	var days = {
-  			"years": {
-  			  "festivals": [
-  			    {
-							"id":"02",
-  			      "date": "1月2日",
-  			      "name": "秘封之日，秘封の日",
-  			      "ref": "1（ひ）2（ふう），秘封倶楽部（ひふうくらぶ）。"
-  			    },
-  			    {
-							"id":"04",
-  			      "date": "1月4日",
-  			      "name": "高丽野阿吽之日，あうんの日",
-  			      "ref": "1（い）4（し），石（いし），高丽野阿吽原本是博丽神社的石狮子（狛犬像）。"
-  			    }
-  			  ]
-  			},
-  			"months": {
-  			  "festivals": [
-  			    {
-					"id":"3",
-  			      "date": "每月3日",
-  			      "name": "萃香之日，萃香の日",
-  			      "ref": "伊吹萃香（いぶき すいか），酒（さけ），谐音3。腰间用锁链坠着三角锥(三角)、球(圆)、立方体(四角)三块有如砝码的金属几何体，3是砝码的数量。"
-  			    }
-  			  ]
-  			}
-			}
-			var output_text = "";
-			var date = new Date();
-			
-			for(i in days.years.festivals){
-				if((""+(date.getMonth()+1)+date.getDate())==days.years.festivals[i].id){
-					output_text += "<b>" + days.years.festivals[i].date + "</b> ";
-					output_text += days.years.festivals[i].name + "<br/>";
-					output_text += days.years.festivals[i].ref + "<br/><br/>";
-				}
-			}
-			for(i in days.months.festivals){
-				if((""+date.getDate())==days.months.festivals[i].id){
-					output_text += "<b>" + days.months.festivals[i].date + "</b> ";
-					output_text += days.months.festivals[i].name + "<br/>";
-					output_text += days.months.festivals[i].ref + "<br/><br/>";
-				}
-			}
-			document.getElementById("festivals").innerHTML = output_text;
-			
-			//document.getElementById("date").innerHTML = "每月" + date.getDate() + "日";
-			//document.getElementById("date").innerHTML = ""+date.getMonth()+date.getDate();//"每月" + 3 + "日";
-			//document.getElementById("date").innerHTML = (3 == days.months.festivals[0].id);
-    	</script>
-    
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+					dayyy = JSON.parse(this.responseText);
+					
+					var output_text = "";
+					var date = new Date();
+					
+					for(i in days.years.festivals){
+						if((""+(date.getMonth()+1)+" "+date.getDate())==days.years.festivals[i].id){
+							output_text += "<b>" + days.years.festivals[i].date + "</b> ";
+							output_text += days.years.festivals[i].name + "<br/>";
+							output_text += days.years.festivals[i].ref + "<br/><br/>";
+						}
+					}
+					for(i in days.months.festivals){
+						if((""+date.getDate())==days.months.festivals[i].id){
+							output_text += "<b>" + days.months.festivals[i].date + "</b> ";
+							output_text += days.months.festivals[i].name + "<br/>";
+							output_text += days.months.festivals[i].ref + "<br/><br/>";
+						}
+					}
+					document.getElementById("festivals").innerHTML = output_text;
+				}                                                    
+			};                                                       
+			xmlhttp.open("GET", "output.txt", true);
+			xmlhttp.send();
+		</script>
+	
 		<div class="footer">
 			<p style="font-size:10px;color:#D0D0D0;">Copyright&copy;2021-∞   All Rights Reserved.版权所有。<br/><del>未经作者允许禁止转载</del><strong>作者允许了也不可以！！！</strong><br/>禁止转载/n次创作(n>1)/用于商业活动/用于非商业活动/等等。</p>
 		</div>
