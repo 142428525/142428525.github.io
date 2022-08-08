@@ -14,4 +14,4 @@
 
 ## 杂项
 - [随笔小故事](https://142428525.github.io/short_story)
-- [⑨小游戏](https://142428525.github.io/chiruno)
+- [（临时传送点）⑨小游戏](https://142428525.github.io/web_games/cirno_math)
