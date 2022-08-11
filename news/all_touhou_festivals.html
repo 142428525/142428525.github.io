@@ -71,6 +71,13 @@
 		</div>
 			
 		<script>
+			function range(start, end) {
+				/* generate a range : [start, start+1, ..., end-1, end] */
+				var len = end - start + 1;
+				var a = new Array(len);
+				for (let i = 0; i < len; i++) a[i] = start + i;
+				return a;
+			}
 			var xmlhttp = new XMLHttpRequest();
 			xmlhttp.onreadystatechange = function() 
 			{
@@ -82,32 +89,41 @@
 					
 					for(i in days.years)
 					{
-						if((""+(date.getMonth()+1)+" "+date.getDate())==days.years[i].id)
+						for(j in range(1,12))
 						{
-							output_text += "<b>" + days.years[i].date + "</b> ";
-							output_text += days.years[i].name + "<br/>";
-							output_text += days.years[i].ref + "<br/><br/>";
-						}
-						else
-						{
-							output_text += "<b>" + (date.getMonth()+1) + "月" + date.getDate() + "日</b> ";
-							output_text += "平和的一天<br/>";
-							output_text += "这天并没有节日呢。<br/><br/>";
+							for(k in range(1,31))
+							{
+								if((""+j+" "+k)==days.years[i].id)
+								{
+									output_text += "<b>" + days.years[i].date + "</b> ";
+									output_text += days.years[i].name + "<br/>";
+									output_text += days.years[i].ref + "<br/><br/>";
+								}
+								else
+								{
+									output_text += "<b>" + j + "月" + k + "日</b> ";
+									output_text += "平和的一天<br/>";
+									output_text += "这天并没有节日呢。<br/><br/>";
+								}
+							}
 						}
 					}
 					for(i in days.months)
 					{
-						if((""+date.getDate())==days.months[i].id)
+						for(j in range(1,31))
 						{
-							output_text += "<b>" + days.months[i].date + "</b> ";
-							output_text += days.months[i].name + "<br/>";
-							output_text += days.months[i].ref + "<br/><br/>";
-						}
-						else
-						{
-							output_text += "<b>" + "每月" + date.getDate() + "日</b> ";
-							output_text += "平和的一天<br/>";
-							output_text += "这天并没有节日呢。<br/><br/>";
+							if((""+j)==days.months[i].id)
+							{
+								output_text += "<b>" + days.months[i].date + "</b> ";
+								output_text += days.months[i].name + "<br/>";
+								output_text += days.months[i].ref + "<br/><br/>";
+							}
+							else
+							{
+								output_text += "<b>" + "每月" + j + "日</b> ";
+								output_text += "平和的一天<br/>";
+								output_text += "这天并没有节日呢。<br/><br/>";
+							}
 						}
 					}
 					document.getElementById("festivals").innerHTML = output_text;
