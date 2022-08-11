@@ -64,46 +64,51 @@
 			<li><a href="..">退回</a></li>
 		</ul>
 		
-		<div style="width=80%;margin-left:10%;">	
+		<div style="width:80%;margin-left:10%;">	
 			<h2 style="text-align:center;">车万节日大全</h2>
-			<p>本页面内容转载自<a href="zh.moegirl.org.cn/东方角色日">萌娘百科</a>和Bilibili用户<a href="b23.tv/Op19jQn">@天Zz（UID：5003705）</a>的<a href=""b23.tv/UOGLXyw>两篇</a><a href="b23.tv/d25xJjz">专栏</a>。</p>
+			<p>本页面内容转载自<a href="zh.moegirl.org.cn/东方角色日">萌娘百科</a>和Bilibili用户<a href="b23.tv/Op19jQn">@天Zz（UID：5003705）</a>的<a href="b23.tv/UOGLXyw">两篇</a><a href="b23.tv/d25xJjz">专栏</a>。</p>
 			<p id="festivals" style="text-align:center;"></p>
 		</div>
 			
 		<script>
 			var xmlhttp = new XMLHttpRequest();
-			xmlhttp.onreadystatechange = function() {
-				if (this.readyState == 4 && this.status == 200) {
+			xmlhttp.onreadystatechange = function() 
+			{
+				if (this.readyState == 4 && this.status == 200) 
+				{
 					var days = JSON.parse(this.responseText);
 					var output_text = "";
 					var date = new Date();
 					
-					for(i in days.years){
-						if((""+(date.getMonth()+1)+" "+date.getDate())==days.years[i].id){
+					for(i in days.years)
+					{
+						if((""+(date.getMonth()+1)+" "+date.getDate())==days.years[i].id)
+						{
 							output_text += "<b>" + days.years[i].date + "</b> ";
 							output_text += days.years[i].name + "<br/>";
 							output_text += days.years[i].ref + "<br/><br/>";
 						}
-						else{
+						else
+						{
 							output_text += "<b>" + (date.getMonth()+1) + "月" + date.getDate() + "日</b> ";
 							output_text += "平和的一天<br/>";
 							output_text += "这天并没有节日呢。<br/><br/>";
 						}
 					}
-					for(i in days.months){
-						if((""+date.getDate())==days.months[i].id){
+					for(i in days.months)
+					{
+						if((""+date.getDate())==days.months[i].id)
+						{
 							output_text += "<b>" + days.months[i].date + "</b> ";
 							output_text += days.months[i].name + "<br/>";
 							output_text += days.months[i].ref + "<br/><br/>";
 						}
-						else{
+						else
+						{
 							output_text += "<b>" + "每月" + date.getDate() + "日</b> ";
 							output_text += "平和的一天<br/>";
 							output_text += "这天并没有节日呢。<br/><br/>";
 						}
-					}
-					if(usual_years && usual_months){
-						
 					}
 					document.getElementById("festivals").innerHTML = output_text;
 				}                                                    
