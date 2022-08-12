@@ -92,3 +92,7 @@ p.foot {
 h2 {
 	text-align: center;
 }
+
+ol li {
+	float: none;
+}
