@@ -27,11 +27,6 @@ code {
 }
 /*萌百*/
 
-body {
-	margin: 0 auto;
-	font-family: Tahoma, Verdana, Arial, sans-serif;
-}
-
 /*runoob*/
 ul {
 	list-style-type: none;
@@ -83,6 +78,11 @@ li a.active {
 	text-align: left;
 }
 /*runoob*/
+
+body {
+	margin: 0 auto;
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+}
 
 p.foot {
 	font-size:10px;
