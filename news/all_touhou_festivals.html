@@ -7,51 +7,7 @@
 		<link rel="apple-touch-icon-precomposed" href=" " />
 		<title>咕霸新闻网</title>
 		<meta charset="utf-8"/>
-		<style>
-			.header {
-				background-color: #f1f1f1;
-				padding: 20px;
-				text-align: center;
-			}
-			body {
-				margin: 0 auto;
-				font-family: Tahoma, Verdana, Arial, sans-serif;
-			}
-			ul {
-				list-style-type: none;
-				margin: 0;
-				padding: 0;
-				overflow: hidden;
-				border: 1px solid #e7e7e7;
-				background-color: #f3f3f3;
-			}
-		
-			li {
-				float: left;
-			}
-			
-			li a {
-				display: block;
-				color: #666;
-				text-align: center;
-				padding: 14px 16px;
-				text-decoration: none;
-			}
-		
-			li a:hover:not(.active) {
-				background-color: #ddd;
-			}
-		
-			li a.active {
-				color: white;
-				background-color: #4CAF50;
-			}
-			.footer {
-				background-color: #f1f1f1;
-				padding: 10px;
-				text-align: center;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="../css/MGE_style.css">
 	</head>
 	<body>
 		<div class="header">
@@ -64,70 +20,90 @@
 			<li><a href="..">退回</a></li>
 		</ul>
 		
-		<div style="width:80%;margin-left:10%;">	
-			<h2 style="text-align:center;">车万节日大全</h2>
-			<p style="text-align:center;">
-				本页面内容转载自<a href="zh.moegirl.org.cn/东方角色日">萌娘百科</a>和
-				Bilibili用户<a href="b23.tv/Op19jQn">@天Zz（UID：5003705）</a>的
-				<a href="b23.tv/UOGLXyw">两篇</a> <a href="b23.tv/d25xJjz">专栏</a>。
+		<!-- main start -->
+		
+		<div style="width:40%;margin-left:30%;text-align:center;">	
+			<h2>车万节日大全</h2>
+			<div class="index">
+				<p>
+					1.<a class="text" href="#year">每年一度的节日</a>
+					<br/>
+					2.<a class="text" href="#month">每月一度的节日</a>
+				</p>
+			</div>
+			<p>
+				本页面内容转载自<a class="text" href="https://zh.moegirl.org.cn/东方角色日">萌娘百科</a>和Bilibili用户<a class="text" href="https://b23.tv/Op19jQn">@天Zz（UID：5003705）</a>的<a class="text" href="https://b23.tv/UOGLXyw">两篇</a><a class="text" href="https://b23.tv/d25xJjz">专栏</a>。
 			</p>
-			<p id="festivals" style="text-align:center;"></p>
+			<p>查询请使用<code>Ctrl+F</code>。</p>
+			<p id="top">（<a class="text" href="#end">点我跃迁到底部</a>）</p>
+			<br/>
+			<p id="festivals"></p>
+			<p id="end">（<a class="text" href="#top">点我回到顶部</a>）</p>
 		</div>
 			
 		<script>
-			function range(start, end) {
-				/* generate a range : [start, start+1, ..., end-1, end] */
-				var len = end - start + 1;
-				var a = new Array(len);
-				for (let i = 0; i < len; i++) a[i] = start + i;
-				return a;
-			}
 			var xmlhttp = new XMLHttpRequest();
 			xmlhttp.onreadystatechange = function() 
 			{
 				if (this.readyState == 4 && this.status == 200) 
 				{
 					var days = JSON.parse(this.responseText);
-					var output_text = "";
-					var date = new Date();
+					var output_text = "<h3 id=\"year\">每年一度的节日</h3>";
+					var flag;
+					var temp;
 					
-					for(j in range(1,12))
+					for(let j = 1; j <= 12; j++)
 					{
-						for(k in range(1,31))
+						for(let k = 1; k <= 31; k++)
 						{
-							for(i in days.years)
+							if((j==2 && (k==30 || k==31)) || (j==4 && k==31) || (j==6 && k==31) || (j==9 && k==31) || (j==11 && k==31))
 							{
-								if((""+j+" "+k)==days.years[i].id)
+								;
+							}
+							else
+							{
+								flag = true;
+								for(i in days.years)
 								{
-									output_text += "<b>" + days.years[i].date + "</b> ";
-									output_text += days.years[i].name + "<br/>";
-									output_text += days.years[i].ref + "<br/><br/>";
+									temp = "";
+									if((""+j+" "+k)==days.years[i].id)
+									{
+										flag = false;
+										temp/*output_text*/ += "<b>" + days.years[i].date + "</b> ";
+										temp/*output_text*/ += days.years[i].name + "<br/>";
+										temp/*output_text*/ += days.years[i].ref + "<br/><br/>";
+										output_text+=temp;
+									}
 								}
-								else
+								if(temp==""&&flag == true)
 								{
-									output_text += "<b>" + j + "月" + k + "日</b> ";
+									output_text += "<b>" + j +"月" + k + "日</b> ";
 									output_text += "平和的一天<br/>";
 									output_text += "这天并没有节日呢。<br/><br/>";
+									flag = false;
+									console.log(temp=="");
 								}
 							}
 						}
 					}
 					
-					for(j in range(1,31))
+					output_text += "<h3 id=\"month\">每月一度的节日</h3>";
+					for(let bill = 1; bill <= 31; bill++)
 					{
-						for(i in days.months)
+						for(baka in days.months)
 						{
-							if((""+j)==days.months[i].id)
+							if((""+bill)==days.months[baka].id)
 							{
-								output_text += "<b>" + days.months[i].date + "</b> ";
-								output_text += days.months[i].name + "<br/>";
-								output_text += days.months[i].ref + "<br/><br/>";
+								output_text += "<b>" + days.months[baka].date + "</b> ";
+								output_text += days.months[baka].name + "<br/>";
+								output_text += days.months[baka].ref + "<br/><br/>";
 							}
 							else
 							{
-								output_text += "<b>" + "每月" + j + "日</b> ";
-								output_text += "平和的一天<br/>";
-								output_text += "这天并没有节日呢。<br/><br/>";
+								//output_text += "<b>" + "每月" + j + "日</b> ";
+								//output_text += "平和的一天<br/>";
+								//output_text += "这天并没有节日呢。<br/><br/>";
+								//break;
 							}
 						}
 					}
@@ -138,9 +114,11 @@
 			xmlhttp.open("GET", "output.txt", true);
 			xmlhttp.send();
 		</script>
-	
+		
+		<!-- main end -->
+		
 		<div class="footer">
-			<p style="font-size:10px;color:#D0D0D0;">本页面为转载内容。版权归原作者所有。</p>
+			<p class="foot">本页面为转载内容。版权归原作者所有。</p>
 		</div>
 	</body>
 </html>
