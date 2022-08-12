@@ -8,10 +8,15 @@
 		<title>咕霸新闻网</title>
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" type="text/css" href="../css/MGE_style.css">
+		<style>
+			span {
+				margin-left: 1em;
+			}
+		</style>
 	</head>
 	<body>
 		<div class="header">
-			<img src="img/news.png" alt="the Logo of the Multiverse Goodbar News" width="512" height="128" />
+			<img src="https://142428525.github.io/news/img/news.png" alt="the Logo of the Multiverse Goodbar News" width="512" height="128" />
 		</div>
 		<ul>
 			<li><a href="index.html">主页</a></li>
@@ -27,6 +32,30 @@
 			<div class="index">
 				<p>
 					1.<a class="text" href="#year">每年一度的节日</a>
+					<br/>
+					<span>1.<a class="text" href="#year1">1月</a></span>
+					<br/>
+					<span>2.<a class="text" href="#year2">2月</a></span>
+					<br/>
+					<span>3.<a class="text" href="#year3">3月</a></span>
+					<br/>
+					<span>4.<a class="text" href="#year4">4月</a></span>
+					<br/>
+					<span>5.<a class="text" href="#year5">5月</a></span>
+					<br/>
+					<span>6.<a class="text" href="#year6">6月</a></span>
+					<br/>
+					<span>7.<a class="text" href="#year7">7月</a></span>
+					<br/>
+					<span>8.<a class="text" href="#year8">8月</a></span>
+					<br/>
+					<span>9.<a class="text" href="#year9">9月</a></span>
+					<br/>
+					<span>10.<a class="text" href="#year10">10月</a></span>
+					<br/>
+					<span>11.<a class="text" href="#year11">11月</a></span>
+					<br/>
+					<span>12.<a class="text" href="#year12">12月</a></span>
 					<br/>
 					2.<a class="text" href="#month">每月一度的节日</a>
 				</p>
@@ -49,11 +78,12 @@
 				{
 					var days = JSON.parse(this.responseText);
 					var output_text = "<h3 id=\"year\">每年一度的节日</h3>";
-					var flag;
-					var temp;
+					var flag, flag2;
+					var temp, temp2;
 					
 					for(let j = 1; j <= 12; j++)
 					{
+						output_text += "<h4 id=\"year" + j + "\">" + j + "月</h4>";
 						for(let k = 1; k <= 31; k++)
 						{
 							if((j==2 && (k==30 || k==31)) || (j==4 && k==31) || (j==6 && k==31) || (j==9 && k==31) || (j==11 && k==31))
@@ -69,19 +99,18 @@
 									if((""+j+" "+k)==days.years[i].id)
 									{
 										flag = false;
-										temp/*output_text*/ += "<b>" + days.years[i].date + "</b> ";
-										temp/*output_text*/ += days.years[i].name + "<br/>";
-										temp/*output_text*/ += days.years[i].ref + "<br/><br/>";
+										temp += "<b>" + days.years[i].date + "</b> ";
+										temp += days.years[i].name + "<br/>";
+										temp += days.years[i].ref + "<br/><br/>";
 										output_text+=temp;
 									}
 								}
-								if(temp==""&&flag == true)
+								if(temp=="" && flag == true)
 								{
 									output_text += "<b>" + j +"月" + k + "日</b> ";
 									output_text += "平和的一天<br/>";
 									output_text += "这天并没有节日呢。<br/><br/>";
 									flag = false;
-									console.log(temp=="");
 								}
 							}
 						}
@@ -90,28 +119,32 @@
 					output_text += "<h3 id=\"month\">每月一度的节日</h3>";
 					for(let bill = 1; bill <= 31; bill++)
 					{
+						flag2 = true;
 						for(baka in days.months)
 						{
+							temp2 = "";
 							if((""+bill)==days.months[baka].id)
 							{
-								output_text += "<b>" + days.months[baka].date + "</b> ";
-								output_text += days.months[baka].name + "<br/>";
-								output_text += days.months[baka].ref + "<br/><br/>";
+								flag2 = false;
+								temp2 += "<b>" + days.months[baka].date + "</b> ";
+								temp2 += days.months[baka].name + "<br/>";
+								temp2 += days.months[baka].ref + "<br/><br/>";
+								output_text += temp2;
 							}
-							else
-							{
-								//output_text += "<b>" + "每月" + j + "日</b> ";
-								//output_text += "平和的一天<br/>";
-								//output_text += "这天并没有节日呢。<br/><br/>";
-								//break;
-							}
+						}
+						if(temp2=="" && flag2==true)
+						{
+							output_text += "<b>" + "每月" + bill + "日</b> ";
+							output_text += "平和的一天<br/>";
+							output_text += "这天并没有节日呢。<br/><br/>";
+							flag2 = false;
 						}
 					}
 					
 					document.getElementById("festivals").innerHTML = output_text;
 				}                                                    
 			};                                                       
-			xmlhttp.open("GET", "output.txt", true);
+			xmlhttp.open("GET", "https://142428525.github.io/news/output.txt", true);
 			xmlhttp.send();
 		</script>
 		
