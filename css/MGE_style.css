@@ -1,0 +1,90 @@
+/*萌百*/
+a.text:link {
+	color: #0645ad;
+	text-decoration:none;
+}
+
+a.text:visited {
+	color: #0645ad;
+	text-decoration:none;
+}
+
+a.text:hover {
+	color: #0645ad;
+	text-decoration:underline;
+}
+
+a.text:active {
+	color: #0645ad;
+	text-decoration:underline;
+}
+
+code {
+	background-color: #f8f9fa;
+	border: 1px solid #eaecf0;
+	border-radius: 2px;
+	padding: 1px 4px;
+}
+/*萌百*/
+
+body {
+	margin: 0 auto;
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+}
+
+/*runoob*/
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	border: 1px solid #e7e7e7;
+	background-color: #f3f3f3;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: #666;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover:not(.active) {
+	background-color: #ddd;
+}
+
+li a.active {
+	color: white;
+	background-color: #4CAF50;
+}
+
+.header {
+	background-color: #f1f1f1;
+	padding: 20px;
+	text-align: center;
+}
+
+.footer {
+	background-color: #f1f1f1;
+	padding: 10px;
+	text-align: center;
+}
+
+.index {
+	background-color:#ddffff;
+	padding:14px;
+	border-left:6px solid #cccccc;
+	border-color:#2196F3;
+	text-align: left;
+}
+/*runoob*/
+
+p.foot {
+	font-size:10px;
+	color:#D0D0D0;
+}
