@@ -58,19 +58,19 @@ li a.active {
 	background-color: #4CAF50;
 }
 
-.header {
+div.header {
 	background-color: #f1f1f1;
 	padding: 20px;
 	text-align: center;
 }
 
-.footer {
+div.footer {
 	background-color: #f1f1f1;
 	padding: 10px;
 	text-align: center;
 }
 
-.index {
+div.index {
 	background-color:#ddffff;
 	padding:14px;
 	border-left:6px solid #cccccc;
@@ -95,4 +95,9 @@ h2 {
 
 ol li {
 	float: none;
+}
+
+div.main {
+	width:80%;
+	margin-left:10%;
 }
