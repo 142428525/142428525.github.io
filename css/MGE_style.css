@@ -21,7 +21,7 @@ a.text:active {
 
 @font-face {
 	font-family: consolas;
-	src: url(consola.woff)
+	src: url(consola.woff);
 }
 
 code {
