@@ -85,20 +85,9 @@ div.index {
 }
 /*runoob*/
 
-@font-face {
-	font-family: shs;
-	src: url(shs_cn.woff);
-}
-
-@font-face {
-	font-family: shs;
-	src: url(shs_cn_b.woff);
-	font-weight: bold;
-}
-
 body {
 	margin: 0 auto;
-	font-family: shs, Tahoma, Arial, sans-serif;
+	font-family: Tahoma, Arial, sans-serif;
 }
 
 p.foot {
