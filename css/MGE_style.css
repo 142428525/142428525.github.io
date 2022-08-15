@@ -19,7 +19,13 @@ a.text:active {
 	text-decoration:underline;
 }
 
+@font-face {
+	font-family: consolas;
+	src: url(consola.woff)
+}
+
 code {
+	font-family: consolas, monospace;
 	background-color: #f8f9fa;
 	border: 1px solid #eaecf0;
 	border-radius: 2px;
@@ -28,7 +34,7 @@ code {
 /*萌百*/
 
 /*runoob*/
-ul {
+ul.navi {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -37,11 +43,11 @@ ul {
 	background-color: #f3f3f3;
 }
 
-li {
+ul.navi li {
 	float: left;
 }
 
-li a {
+ul.navi li a {
 	display: block;
 	color: #666;
 	text-align: center;
@@ -49,13 +55,13 @@ li a {
 	text-decoration: none;
 }
 
-li a:hover:not(.active) {
+ul.navi li a:hover:not(.active) {
 	background-color: #ddd;
 }
 
-li a.active {
+ul.navi li a.active {
 	color: white;
-	background-color: #4CAF50;
+	background-color: #4caf50;
 }
 
 div.header {
@@ -74,27 +80,34 @@ div.index {
 	background-color:#ddffff;
 	padding:14px;
 	border-left:6px solid #cccccc;
-	border-color:#2196F3;
+	border-color:#2196f3;
 	text-align: left;
 }
 /*runoob*/
 
+@font-face {
+	font-family: shs;
+	src: url(shs_cn.woff);
+}
+
+@font-face {
+	font-family: shs;
+	src: url(shs_cn_b.woff);
+	font-weight: bold;
+}
+
 body {
 	margin: 0 auto;
-	font-family: Tahoma, Verdana, Arial, sans-serif;
+	font-family: shs, Tahoma, Arial, sans-serif;
 }
 
 p.foot {
 	font-size:10px;
-	color:#D0D0D0;
+	color:#d0d0d0;
 }
 
 h2 {
 	text-align: center;
-}
-
-ol li {
-	float: none;
 }
 
 div.main {
