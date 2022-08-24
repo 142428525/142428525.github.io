@@ -1,6 +1,8 @@
 ---
+layout: null
 title: baka
 description: baka
+show-downloads: true
 ---
 ## Welcome to GitHub Pages
 
