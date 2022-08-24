@@ -1,6 +1,6 @@
 ---
 layout: MGE_style
-title: MGE百科全书 - 超形上学部
+title: 咕霸百科全书 - 超形上学部
 head_title: 超形上学部
 description: 杀死我们的神
 copy: false
