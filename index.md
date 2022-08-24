@@ -1,4 +1,3 @@
-# 首页
 ## 简介
 欢迎来到142428525的个人页面！由于是GitHub托管页面所以加载速度可能会不稳定甚至掉线~不过这点延迟没关系啦！
 
@@ -6,12 +5,16 @@
 
 （推荐：1920\*1080，Chrome，最大化）
 
-# 子页面
-[（此处）首页](https://142428525.github.io/index)
-## 整活与迫害
+## 链接页面
+（此处）[首页](https://142428525.github.io/index)
+
+### 整活与迫害
 - [咕霸百科全书](https://142428525.github.io/MGE/index)
 - [咕霸新闻](https://142428525.github.io/news)
 
-## 杂项
-- [随笔](https://142428525.github.io/short_story)
-- [（临时传送点）⑨小游戏](https://142428525.github.io/web_games/cirno_math)
+### 杂项
+- （404）[随笔（大嘘）](https://142428525.github.io/short_story)
+- （临时）[⑨小游戏](https://142428525.github.io/web_games/cirno_math)
+
+### 特殊
+- （404）[???](https://142428525.github.io/special)
