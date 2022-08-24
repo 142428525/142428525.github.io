@@ -1,7 +1,8 @@
 ---
-title: 'pataphysics
+title: SCP基金会 - 超形上学部
 description: 遵循CC BY-SA 3.0协议
 ---
+
 > 'Pataphysics Department Logo \| \[ANIMATION\]
 > 
 > Logo Designed by TSATPWTCOTTTADC, CSS Spinner by Woedenaz
