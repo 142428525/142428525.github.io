@@ -1,5 +1,4 @@
 ---
-layout: post
 title: baka
 description: baka
 show-downloads: true
