@@ -13,5 +13,6 @@ hello world!
 ### baka
 > blockquote
 
-don't use `#`.
+Don't use `#`.
+
 CJKの显示
