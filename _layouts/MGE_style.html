@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="{{site.lang | deafult: zh-CN}}">
+	<head>
+		<!-- MGE ->
+		<link rel="icon" href="img/small_goodbar.png" />
+		<link rel="shortcut icon" href="img/small_goodbar.png" /> 
+		<link rel="apple-touch-icon" href="img/small_goodbar.png" />
+		<link rel="apple-touch-icon-precomposed" href="img/small_goodbar.png" />
+		<title>咕霸百科全书</title>
+		<!- MGE ->
+		<!- news ->
+		<link rel="icon" href="img/favicon.ico" />
+		<link rel="shortcut icon" href="img/favicon.ico" /> 
+		<link rel="apple-touch-icon" href="img/favicon.ico" />
+		<link rel="apple-touch-icon-precomposed" href="img/favicon.ico" />
+		<title>咕霸新闻网</title>
+		<!- news -->
+		
+		<title>{{page.title | deafult: 无标题}}</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="https://142428525.github.io/css/MGE_style.css">
+	</head>
+	<body>
+		<div class="header">
+			<!-- MGE ->
+			<img src="img/goodbar.png" alt="the Logo of the Multiverse Goodbar Encyclopedia" width="512" height="128" />
+			<!- MGE ->
+			<!- news ->
+			<img src="img/news.png" alt="the Logo of the Multiverse Goodbar News" width="512" height="128" />
+			<!- mews -->
+		</div>
+		<ul class="navi">
+			<!-- MGE ->
+			<li><a href="index.html">主页</a></li>
+			<li><a href="../news">新闻</a></li>
+			<li><a href="contact.html">联系</a></li>
+			<li><a href="about.html">关于</a></li>
+            <li><a href="..">退回</a></li>
+			<!- MGE ->
+			<!- news ->
+			<li><a href="index.html">主页</a></li>
+			<li><a href="../MGE/index.html">百科</a></li>
+			<li><a href="like.html">特辑</a></li>
+			<li><a href="..">退回</a></li>
+			<!- news -->
+			
+			<li><a href="https://142428525.github.io">退回</a></li>
+		</ul>
+		
+		<!-- main start -->
+		
+		<!--
+		<div class="main">	
+			<h2>标题</h2>
+			<div class="index">
+				<p>
+					1.<a class="text" href="#1">目录</a>
+					<br/>
+					2.<a class="text" href="#2">目录</a>
+				</p>
+			</div>
+			<p></p>
+			<h3 id="1">目录</h3>
+		</div>
+		-->
+		
+		{{content}}
+		
+		<!-- main end -->
+		
+		<div class="footer">
+			{% if page.copy %}
+			<p class="foot">本页面为转载内容。版权归原作者所有。</p>
+			{% else %}
+			<p class="foot">Copyright&copy;2021-∞   All Rights Reserved.版权所有。<br/><del>未经作者允许禁止转载</del><strong>作者允许了也不可以！！！</strong><br/>禁止转载/n次创作(n>1)/用于商业活动/用于非商业活动/等等。</p>
+			{% endif %}
+			<p class="foot">本页面基于<a href="https://pages.github.com">GitHub Pages</a>。</p>
+		</div>
+	</body>
+</html>
