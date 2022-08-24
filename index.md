@@ -4,7 +4,7 @@
 
 （请尽量使用电脑查看本网站以防止奇怪的排版bug，本人不考虑兼容性问题）
 
-（推荐：1920*1080，Chrome，最大化）
+（推荐：1920\*1080，Chrome，最大化）
 
 # 子页面
 [（此处）首页](https://142428525.github.io/index)
@@ -13,5 +13,5 @@
 - [咕霸新闻](https://142428525.github.io/news)
 
 ## 杂项
-- [随笔小故事](https://142428525.github.io/short_story)
+- [随笔](https://142428525.github.io/short_story)
 - [（临时传送点）⑨小游戏](https://142428525.github.io/web_games/cirno_math)
