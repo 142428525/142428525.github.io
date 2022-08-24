@@ -2,7 +2,7 @@
 layout: MGE_style
 title: 咕霸百科全书 - 超形上学部
 head_title: 超形上学部
-description: 杀死我们的神
+description: 杀死我们的<a class="text" href="https://scp-wiki-cn.wikidot.com/sandrewswann-s-proposal" title="谁？你！">神</a>
 copy: false
 head_img_width: 150px
 head_img_height: 150px
