@@ -103,6 +103,8 @@ div.index
 blockquote
 {
 	color: #819198;
+	margin-left: 0px;
+	padding-left: 4em;
 	border-left:0.3rem solid #dce6f0;
 }
 /*github pages*/
