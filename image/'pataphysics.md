@@ -1,3 +1,7 @@
+---
+title: 'pataphysics
+description: 遵循CC BY-SA 3.0协议
+---
 > 'Pataphysics Department Logo \| \[ANIMATION\]
 > 
 > Logo Designed by TSATPWTCOTTTADC, CSS Spinner by Woedenaz
