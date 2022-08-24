@@ -1,8 +1,10 @@
 ---
 title: baka
 description: baka
+show_downloads: true
 show-downloads: true
 ---
+var: {{show-downloads}}, {{layout}}, {{site.lang}}, {{site.pages}}
 ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/142428525/142428525.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
