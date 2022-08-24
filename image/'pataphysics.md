@@ -1,8 +1,8 @@
-> 'Pataphysics Department Logo | [ANIMATION]
+> 'Pataphysics Department Logo \| \[ANIMATION\]
 > 
 > Logo Designed by TSATPWTCOTTTADC, CSS Spinner by Woedenaz
 
-!['pataphysics](https://142428525.github.io/image/'pataphysics.svg "杀死我们的神")
+<img src="'pataphysics.svg" alt="'pataphysics" title="杀死我们的神" width=150px height=150px/>
 
 转载自[SCP基金会](https://scp-wiki-cn.wikidot.com/theme:pataphysics)。
 
