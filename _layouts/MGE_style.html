@@ -1,20 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{site.lang | deafult: zh-CN}}">
 	<head>
-		<!-- MGE ->
-		<link rel="icon" href="img/small_goodbar.png" />
-		<link rel="shortcut icon" href="img/small_goodbar.png" /> 
-		<link rel="apple-touch-icon" href="img/small_goodbar.png" />
-		<link rel="apple-touch-icon-precomposed" href="img/small_goodbar.png" />
-		<title>咕霸百科全书</title>
-		<!- MGE ->
-		<!- news ->
+		<!--
 		<link rel="icon" href="img/favicon.ico" />
 		<link rel="shortcut icon" href="img/favicon.ico" /> 
 		<link rel="apple-touch-icon" href="img/favicon.ico" />
 		<link rel="apple-touch-icon-precomposed" href="img/favicon.ico" />
-		<title>咕霸新闻网</title>
-		<!- news -->
+		-->
 		
 		<title>{{page.title | deafult: 无标题}}</title>
 		<meta charset="utf-8"/>
@@ -22,12 +14,13 @@
 	</head>
 	<body>
 		<div class="header">
-			<!-- MGE ->
+			<!--
 			<img src="img/goodbar.png" alt="the Logo of the Multiverse Goodbar Encyclopedia" width="512" height="128" />
-			<!- MGE ->
-			<!- news ->
 			<img src="img/news.png" alt="the Logo of the Multiverse Goodbar News" width="512" height="128" />
-			<!- mews -->
+			-->
+			<img src="{{page.head_picture_src}}"/>
+			<h1 style="text-align:center;">{{page.title | deafult: 无标题}}</h1>
+			<h2>{{page.description}}</h2>
 		</div>
 		<ul class="navi">
 			<!-- MGE ->
@@ -48,21 +41,6 @@
 		</ul>
 		
 		<!-- main start -->
-		
-		<!--
-		<div class="main">	
-			<h2>标题</h2>
-			<div class="index">
-				<p>
-					1.<a class="text" href="#1">目录</a>
-					<br/>
-					2.<a class="text" href="#2">目录</a>
-				</p>
-			</div>
-			<p></p>
-			<h3 id="1">目录</h3>
-		</div>
-		-->
 		
 		<div class="main">
 			{{content}}
