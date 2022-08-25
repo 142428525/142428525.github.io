@@ -7,7 +7,7 @@ head_img_href: \{{"image/'pataphysics.html" | absolute_url}}
 head_img_title: 遵循CC BY-SA 3.0协议
 head_img_width: 150px
 head_img_height: 150px
-head_img_src: \{{"image/'pataphysics.svg" | absolute_url}}
+head_img_src: \{\{"image/'pataphysics.svg" | absolute_url}}
 ---
 hello world!
 ## bill
