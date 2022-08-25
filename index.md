@@ -21,4 +21,4 @@ description: 这是142428525的个人页面，欢迎欢迎！
 - （临时）[⑨小游戏]({{"web_games/cirno_math" | absolute_url}})
 
 ### 特殊
-- （404）[???]({{"special" | absolute_url}})
+- [特殊页面]({{"special" | absolute_url}})
