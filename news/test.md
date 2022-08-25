@@ -22,3 +22,8 @@ CJKの显示
 var:{{site.github.url}},{{site.url}},{{"image/'pataphysics.svg" | absolute_url}}
 
 `以上，①适用范围小，不推荐    ②单独使用只能       ③很好，就是长了点，不能指定根目录，可能需要转义`
+
+#### list:
+{% for pagee in site.pages %}
+- [{{pagee.title}}]({{pagee.url}})
+{% endfor %}
