@@ -19,10 +19,10 @@
 			{% endif %}
 		</div>
 		<ul class="navi">
-			<li><a {%if page.1%}class="active"{%endif%} href="index">主页</a></li>
+			<li><a {% if page.1 %}class="active"{% endif %} href="index">主页</a></li>
 			<li><a href="../news">新闻</a></li>
-			<li><a {%if page.2%}class="active"{%endif%} href="contact">联系</a></li>
-			<li><a {%if page.3%}class="active"{%endif%} href="about">关于</a></li>
+			<li><a {% if page.2 %}class="active"{% endif %} href="contact">联系</a></li>
+			<li><a {% if page.3 %}class="active"{% endif %} href="about">关于</a></li>
 			<li><a href="..">退回</a></li>
 		</ul>
 		
