@@ -1,6 +1,6 @@
 ---
 title: 特殊页面
-description: 顾名思义
+description: <a href="..">点我返回首页</a>
 ---
 ## 孤立页面（UTC {{site.time}}时的版本）
 - [all_touhou_festivals]({{"news/all_touhou_festivals" | absolute_url}})
