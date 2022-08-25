@@ -10,10 +10,10 @@ description: 这是142428525的个人页面，欢迎欢迎！
 （推荐：1920\*1080，Chrome，最大化）
 
 ## 链接页面
-（此处）[首页](https://142428525.github.io/index)
+（此处）[首页]({{site.url}})
 
 ### 整活与迫害
-- [咕霸百科全书](https://142428525.github.io/MGE/index)
+- [咕霸百科全书]({{"MGE/index" | absolute_url}})
 - [咕霸新闻](https://142428525.github.io/news)
 
 ### 杂项
