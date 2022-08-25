@@ -19,4 +19,4 @@ Don't use `#`.
 
 CJKの显示
 
-var:{{site.source}}
+var:{{site.github.url}}
