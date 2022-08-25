@@ -13,12 +13,12 @@ description: 这是142428525的个人页面，欢迎欢迎！
 （此处）[首页]({{site.url}})
 
 ### 整活与迫害
-- [咕霸百科全书]({{"MGE/index" | absolute_url}})
-- [咕霸新闻](https://142428525.github.io/news)
+- [咕霸百科全书]({{"MGE" | absolute_url}})
+- [咕霸新闻]({{"news" | absolute_url}})
 
 ### 杂项
-- （404）[随笔（大嘘）](https://142428525.github.io/short_story)
-- （临时）[⑨小游戏](https://142428525.github.io/web_games/cirno_math)
+- （404）[随笔（大嘘）]({{"short_story" | absolute_url}})
+- （临时）[⑨小游戏]({{"web_games/cirno_math" | absolute_url}})
 
 ### 特殊
-- （404）[???](https://142428525.github.io/special)
+- （404）[???]({{"special" | absolute_url}})
