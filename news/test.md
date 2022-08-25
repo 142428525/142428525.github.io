@@ -34,7 +34,8 @@ var:{{site.github.url}},{{site.url}},{{"image/'pataphysics.svg" | absolute_url}}
 {% endfor %}
 
 #### special:
-{% for pagee in site.pages | where_exp:"pageee","pageee.tags contains 'scp'" %}
+{% assign pageeee = site.pages | where_exp:"pageee","pageee.tags contains 'scp'" %}
+{% for pagee in pageeee %}
 - [{{pagee.title}}]({{pagee.url}})
 	- {{pagee.categories}}
 	- {{pagee.tags}}
