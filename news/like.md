@@ -3,7 +3,7 @@ layout: news
 title: 特辑
 a2: true
 ---
-var:{{page.categories}}
+var:{% for category in page.categories %}{{category}},{% endfor %}*end*.
 <style>
 	p
 	{
