@@ -109,21 +109,31 @@ blockquote
 }
 /*github pages*/
 
-body {
+body
+{
 	margin: 0 auto;
 	font-family: Tahoma, Arial, sans-serif;
 }
 
-p.foot {
+p.foot
+{
 	font-size:10px;
 	color:#d0d0d0;
 }
 
-h2 {
+h2
+{
 	text-align: center;
 }
 
-div.main {
+div.main
+{
 	width:80%;
 	margin-left:10%;
+}
+
+.line
+{
+	margin-bottom: 0;
+	border-bottom: 1px solid #08d;
 }
