@@ -1,6 +1,6 @@
 ---
 title: 特殊页面
-description: 点<a href="..">我</a>返回首页
+description: 点<a href=".." style="color:#efefff">我</a>返回首页
 ---
 ## 孤立页面（UTC {{site.time}}的版本）
 - [all_touhou_festivals]({{"news/all_touhou_festivals" | absolute_url}})
