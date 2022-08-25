@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{site.lang | deafult: zh-CN}}">
+<html lang="{{site.lang | default: zh-CN}}">
 	<head>
 		<!--
 		<link rel="icon" href="img/favicon.ico" />
@@ -8,14 +8,14 @@
 		<link rel="apple-touch-icon-precomposed" href="img/favicon.ico" />
 		-->
 		
-		<title>{{page.title | deafult: 无标题}}</title>
+		<title>{{page.title | default: 无标题}}</title>
 		<meta charset="utf-8"/>
 		<link rel="stylesheet" type="text/css" href="https://142428525.github.io/css/MGE_style.css">
 	</head>
 	<body>
 		<div class="header">
 			<a href="{{page.head_img_href}}" target="_blank" style="text-decoration:none;">
-				<img src="{{page.head_img_src}}" alt="{{page.head_img_alt | deafult: 头图}}" title="{{page.head_img_title | deafult: 头图}}" width="{{page.head_img_width}}" height="{{page.head_img_height}}"/>
+				<img src="{{page.head_img_src}}" alt="{{page.head_img_alt | default: 头图}}" title="{{page.head_img_title | default: 头图}}" width="{{page.head_img_width}}" height="{{page.head_img_height}}"/>
 			</a>
 			<h1 style="display:inline-block;text-align:left;vertical-align:top;margin:0px;">
 				<p style="margin:20px 0px;">咕霸百科全书</p>
