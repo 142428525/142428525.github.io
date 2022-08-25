@@ -5,7 +5,9 @@ tags: test
 ---
 点<a href="..">我</a>返回首页
 
-最后更新于{{site.time | date: "%Y-%m-%d %H:%M:%S"}}。
+***
+
+也许最后更新于{{site.time | date: "%Y-%m-%d %H:%M:%S"}}。
 ## 孤立页面
 ### ./
 - [404]({{"404" | absolute_url}})
