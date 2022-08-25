@@ -3,6 +3,7 @@ layout: news
 title: 特辑
 a2: true
 ---
+var:{{page.categories}}
 <style>
 	p
 	{
