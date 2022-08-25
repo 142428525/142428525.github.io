@@ -2,7 +2,7 @@
 title: 特殊页面
 description: 顾名思义
 ---
-## 孤立页面（{{site.time}}的版本）
+## 孤立页面（UTC {{site.time}}时的版本）
 - [all_touhou_festivals]({{"news/all_touhou_festivals" | absolute_url}})
 - [bible]({{"news/bible" | absolute_url}})
 - [countdown]({{"news/countdown" | absolute_url}})
