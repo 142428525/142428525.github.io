@@ -1,4 +1,3 @@
-
 ---
 layout: MGE_style
 title: 咕霸百科全书 - 超形上学部
