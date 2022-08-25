@@ -19,4 +19,4 @@ Don't use `#`.
 
 CJKの显示
 
-var:{{site.github.url}},{{site.url}}
+var:{{site.github.url}},{{site.url}},{{"image/'pataphysics.svg" | absolute_url}}
