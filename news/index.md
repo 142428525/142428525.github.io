@@ -1,7 +1,7 @@
 ---
 layout: news
 title: 首页
-1: true
+a1: true
 ---
 <p style="color:red;text-align:center;">
 	<big><big><big>
