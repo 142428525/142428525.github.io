@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" href="img/favicon.ico" />
+		<link rel="shortcut icon" href="img/favicon.ico" /> 
+		<link rel="apple-touch-icon" href="img/favicon.ico" />
+		<link rel="apple-touch-icon-precomposed" href="img/favicon.ico" />
+		<title>咕霸新闻网 - {{page.title | deafult: 无标题}}</title>
+    
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="MGE_style.css">
+	</head>
+	<body>
+		<div class="header">
+			<img src="img/news.png" alt="the Logo of the Multiverse Goodbar News" width="512" height="128" />
+			<hr/>
+			<h2>{{page.description}}</h2>
+		</div>
+		<ul class="navi">
+			<li><a href="index.html">主页</a></li>
+			<li><a href="../MGE/index.html">百科</a></li>
+			<li><a href="like.html">特辑</a></li>
+			<li><a href="..">退回</a></li>>
+		</ul>
+		
+		<!-- main start -->
+		
+		<div class="main">	
+{{content}}
+		</div>
+		
+		<!-- main end -->
+		
+		<div class="footer">
+			{% if page.copy %}
+			<p class="foot">本页面为转载内容。版权归原作者所有。</p>
+			{% else %}
+			<p class="foot">Copyright&copy;2021-∞   All Rights Reserved.版权所有。<br/><del>未经作者允许禁止转载</del><strong>作者允许了也不可以！！！</strong><br/>禁止转载/n次创作(n>1)/用于商业活动/用于非商业活动/等等。</p>
+			{% endif %}
+		</div>
+	</body>
+</html>
