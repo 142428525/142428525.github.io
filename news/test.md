@@ -8,6 +8,8 @@ head_img_title: 遵循CC BY-SA 3.0协议
 head_img_width: 150px
 head_img_height: 150px
 head_img_src: https://142428525.github.io/image/'pataphysics.svg
+categories: bill baka wiki test
+tags: pataphysics scp
 ---
 
 hello world!
@@ -26,4 +28,7 @@ var:{{site.github.url}},{{site.url}},{{"image/'pataphysics.svg" | absolute_url}}
 #### list:
 {% for pagee in site.pages %}
 - [{{pagee.title}}]({{pagee.url}})
+	- {{pagee.categories}}
+	- {{pagee.tags}}
+
 {% endfor %}
