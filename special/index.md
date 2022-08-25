@@ -12,7 +12,7 @@ description: 此处收录了一些对所有页面进行的手动统计
 - [404]({{"404" | absolute_url}})
 - [ex-index]({{"ex-index" | absolute_url}})
 
-### /news
+### /news/
 - [all_touhou_festivals]({{"news/all_touhou_festivals" | absolute_url}})
 - [bible]({{"news/bible" | absolute_url}})
 - [countdown]({{"news/countdown" | absolute_url}})
