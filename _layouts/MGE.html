@@ -13,8 +13,10 @@
 	<body>
 		<div class="header">
 			<img src="img/goodbar.png" alt="the Logo of the Multiverse Goodbar Encyclopedia" width="512" height="128" />
+			{% if page.description %}
 			<hr/>
 			<h2>{{page.description}}</h2>
+			{% endif %}
 		</div>
 		<ul class="navi">
 			<li><a href="index.html">主页</a></li>
