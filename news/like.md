@@ -61,5 +61,3 @@ a2: true
 <p>
 	朕于兹得以“维护”国体，信倚尔等“忠良臣民”之“赤诚”，并常与尔等臣民同在。若夫“为情所激，妄滋事端”，或者同胞“互相排挤，扰乱时局”；因而“迷误大道，失信义于世界”，此朕所“深戒”。宜举国一致，子孙相传，确信“神州”之不灭。念“任重而道远”，倾全力于将来之建设，笃守“道义”，坚定“志操”，誓必发扬国体之“精华”，不致落后于世界之进化，望尔等臣民“善体朕意”。
 </p>
-
-<iframe src="//player.bilibili.com/player.html?aid=29399247&bvid=BV1TW411R7qZ&cid=51101709&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
