@@ -10,7 +10,7 @@ head_img_height: 150px
 head_img_src: https://142428525.github.io/image/'pataphysics.svg
 tags: test
 ---
-
+var:{{page.id}}
 hello world!
 ## bill
 ### baka
