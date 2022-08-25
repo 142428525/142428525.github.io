@@ -3,7 +3,6 @@ layout: news
 title: 特辑
 a2: true
 ---
-var:{% for pagee in site.pages %}{{pagee}},{% endfor %}*end*.
 <style>
 	p
 	{
