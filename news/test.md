@@ -18,3 +18,5 @@ hello world!
 Don't use `#`.
 
 CJKの显示
+
+var:{{site.source}}
