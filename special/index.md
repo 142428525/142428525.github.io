@@ -38,6 +38,44 @@ tags: test
 ***
 
 以下为自动生成列表。
+
+{% for page in site.pages %}
+	{% assign temp_tag_list_list[{% increment num %}] = page.tags %}
+{% endfor %}
+{% for temp_tag_list in temp_tag_list_list %}
+	{% for temp_tag in temp_tag_list %}
+		{% if tag_list contains temp_tag %}
+		{% else %}
+			{% assign tag_list[{% increment n %}] = temp_tag %}
+		{% endif %}
+	{% endfor %}
+{% endfor %}
+{% assign tag_list = {{tag_list | sort}} %}
+
+<form action="">
+	<select id="tags_select">
+		{% for tag in tag_list %}
+		<option value="{{tag}}">{{tag}}</option>
+	</select>
+</form>
+
+{% capture text %}
+<p id="text" style="display:none;"></p>
+{% endcapture %}
+
+<script>
+	var selector = document.getElementById("tags_select");
+	var value = selector.options[selector.selectedIndex].value;
+	document.getElementById("text").innerHTML = value;
+</script>
+
+var:{{text}}
+
+{% assign tag_pages = site.pages | where_exp:"page","page.tags contains {{text}}" %}
+{% for tag_page in tag_pages %}
+- [{{tag_page.title}}]({{tag_page.url}})
+{% endfor %}
+
 ## 施工中
 筛选`page.tags`变量中存在test的页面。
 {% assign test_pages = site.pages | where_exp:"page","page.tags contains 'test'" %}
