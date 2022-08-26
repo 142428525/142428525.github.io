@@ -69,13 +69,17 @@ tags: test,啊,a
 {% for tag_page in tag_pages %}
 - [{{tag_page.title}}]({{tag_page.url}})
 {% endfor %}
+</div>
 {% endunless %}
 {% endfor %}
 
 <script>
 	var selector = document.getElementById("tags_select");
-	var value = selector.options[selector.selectedIndex].value;
-	document.getElementById(value).style.display = "block";
+	while(true)
+	{
+		var value = selector.options[selector.selectedIndex].value;
+		document.getElementById(value).style.display = "block";
+	}
 </script>
 
 ## 施工中
