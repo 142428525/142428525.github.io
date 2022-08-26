@@ -52,25 +52,28 @@ tags: test,啊,a
 {% assign tag_list = tag_list | sort %}
 
 <form action="">
+	<p style="display:inline;">请在此处选择要筛选的tag：</p>
 	<select id="tags_select">
+		<option selected disabled hidden style="display:none;" value="">
+		</option>
 		{% for tag in tag_list %}
 			{% unless tag == "" %}
-				<option value="{{tag}}">{{tag}}</option>
+		<option value="{{tag}}">{{tag}}</option>
 			{% endunless %}
 		{% endfor %}
 	</select>
 </form>
 
 {% for tag in tag_list %}
-{% unless tag == "" %}
+	{% unless tag == "" %}
 <div id="{{tag}}" style="display:none;">
-## {{tag}}
-{% assign tag_pages = site.pages | where_exp: "page","page.tags contains tag" %}
-{% for tag_page in tag_pages %}
-- [{{tag_page.title}}]({{tag_page.url}})
-{% endfor %}
+	<h2>{{tag}}</h2>
+		{% assign tag_pages = site.pages | where_exp: "page","page.tags contains tag" %}
+		{% for tag_page in tag_pages %}
+	<a href="{{tag_page.url}}">{{tag_page.title}}</a>
+		{% endfor %}
 </div>
-{% endunless %}
+	{% endunless %}
 {% endfor %}
 
 <script>
@@ -91,7 +94,7 @@ tags: test,啊,a
 				result.style.display = "none";
 			}
 		}
-	},200);
+	},100);
 </script>
 
 ## 施工中
