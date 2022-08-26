@@ -1,7 +1,7 @@
 ---
 title: 特殊
 description: 此处不完全收录了一些对不完全所有页面进行的不完全自动统计
-tags: test,啊,a
+tags: test
 ---
 点<a href="..">我</a>返回首页
 
@@ -68,6 +68,7 @@ tags: test,啊,a
 	{% unless tag == "" %}
 <div id="{{tag}}" style="display:none;">
 	<h2>{{tag}}</h2>
+	<p>筛选<code>page.tags</code>变量中存在{{tag}}的页面。</p>
 		{% assign tag_pages = site.pages | where_exp: "page","page.tags contains tag" %}
 	<ul>
 		{% for tag_page in tag_pages %}
@@ -105,3 +106,5 @@ tags: test,啊,a
 {% for test_page in test_pages %}
 - [{{test_page.title}}]({{test_page.url}})
 {% endfor %}
+
+{% include tags_display %}
