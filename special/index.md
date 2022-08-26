@@ -78,20 +78,20 @@ tags: test,啊,a
 	setInterval(
 	function s()
 	{
-		for(option in selector.options)
+		for(let i = 0; i < selector.length; i++)
 		{
-			var value = selector.options[selector.selectedIndex].value;
+			var value = selector.options[i].value;
 			var result = document.getElementById(value);
-			if(result.style.display == "none")
+			if(i == selector.selectedIndex)
 			{
 				result.style.display = "block";
 			}
-			if(document.getElementById(selector.options[option].value) != result)
+			else
 			{
-				document.getElementById(selector.options[option].value).style.display = "none";
+				result.style.display = "none";
 			}
 		}
-	},1000);
+	},200);
 </script>
 
 ## 施工中
