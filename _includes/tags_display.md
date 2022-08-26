@@ -1,5 +1,5 @@
 ***
 
 {% for tag in page.tags %}
-<a href="{{'/special#' | append: {{tag}} | absolute_url}}" style="">{{tag}}</a>
+  <span style="margin:5px;">{{tag}}</span>
 {% endfor %}
