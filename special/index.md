@@ -44,6 +44,9 @@ tags: test
 	{% assign page_tags_str = page.tags | array_to_sentence_string | append: "," %}
 	{% assign temp_tag_list_list = temp_tag_list_list | append: page_tags_str %}
 {% endfor %}
+{% assign temp_tag_list_list = temp_tag_list_list | remove_first: "," %}
+{% assign temp_tag_list_list = temp_tag_list_list | split: "" | reverse | join: ""  | remove_first: "," %}
+{% assign temp_tag_list_list = temp_tag_list_list | split: "" | reverse | join: "" %}
 {% assign temp_tag_list_list = temp_teg_list_list | split: "," %}
 {% assign tag_list = "," %}
 {% for temp_tag_list in temp_tag_list_list %}
@@ -51,6 +54,9 @@ tags: test
 		{% unless tag_list contains temp_tag %}
 			{% assign temp_tag_str = temp_tag | append: ","  %}
 			{% assign tag_list = tag_list | array_to_sentence_string | append: temp_tag_str %}
+			{% assign tag_list = tag_list | remove_first: "," %}
+			{% assign tag_list = tag_list | split: "" | reverse | join: ""  | remove_first: "," %}
+			{% assign tag_list = tag_list | split: "" | reverse | join: "" %}
 			{% assign tag_list = tag_list | split: "," %}
 		{% endunless %}
 	{% endfor %}
