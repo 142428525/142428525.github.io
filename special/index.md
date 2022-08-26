@@ -76,11 +76,15 @@ tags: test,啊,a
 <script>
 	var selector = document.getElementById("tags_select");
 	setInterval(
-	function()
+	function s()
 	{
 		var value = selector.options[selector.selectedIndex].value;
-		document.getElementById(value).style.display = "block";
-	},1);
+		var result = document.getElementById(value);
+		if(result.style.display == "none")
+		{
+			result.style.display = "block";
+		}
+	},1000);
 </script>
 
 ## 施工中
