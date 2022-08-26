@@ -62,13 +62,15 @@ tags: test,啊,a
 </form>
 
 {% for tag in tag_list %}
-	<span id="{{tag}}" style="display:none;">
-		## {{tag}}
-		{% assign tag_pages = site.pages | where_exp: "page","page.tags contains tag" %}
-		{% for tag_page in tag_pages %}
-			- [{{tag_page.title}}]({{tag_page.url}})
-		{% endfor %}
-	</span>
+{% unless tag == "" %}
+<span id="{{tag}}" style="display:none;">
+## {{tag}}
+{% assign tag_pages = site.pages | where_exp: "page","page.tags contains tag" %}
+{% for tag_page in tag_pages %}
+- [{{tag_page.title}}]({{tag_page.url}})
+{% endfor %}
+</span>
+{% endunless %}
 {% endfor %}
 
 <script>
