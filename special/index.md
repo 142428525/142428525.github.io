@@ -61,15 +61,15 @@ tags: test
 	</select>
 </form>
 
-{% capture text %}
-<p id="text" style="display:none;"></p>
-{% endcapture %}
-
 <script>
 	var selector = document.getElementById("tags_select");
 	var value = selector.options[selector.selectedIndex].value;
 	document.getElementById("text").innerHTML = value;
 </script>
+
+{% capture text %}
+<p id="text" style="display:none;"></p>
+{% endcapture %}
 
 var:{{text}}
 
