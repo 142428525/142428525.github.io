@@ -39,7 +39,7 @@ tags: test
 
 以下为自动生成列表。
 
-{% assgin temp_tag_list_list = "," %}
+{% assign temp_tag_list_list = "," %}
 {% for page in site.pages %}
 	{% assign page_tags_str = page.tags | array_to_sentence_string | append: "," %}
 	{% assign temp_tag_list_list = temp_tag_list_list | append: page_tags_str %}
