@@ -80,13 +80,16 @@ tags: test,啊,a
 	{
 		for(option in selector.options)
 		{
-			document.getElementById(option.value).style.display = "none";
-		}
-		var value = selector.options[selector.selectedIndex].value;
-		var result = document.getElementById(value);
-		if(result.style.display == "none")
-		{
-			result.style.display = "block";
+			var value = selector.options[selector.selectedIndex].value;
+			var result = document.getElementById(value);
+			if(result.style.display == "none")
+			{
+				result.style.display = "block";
+			}
+			if(document.getElementById(option.value) != result)
+			{
+				document.getElementById(option.value).style.display = "none";
+			}
 		}
 	},1000);
 </script>
