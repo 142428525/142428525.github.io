@@ -78,6 +78,10 @@ tags: test,啊,a
 	setInterval(
 	function s()
 	{
+		for(option in selector.options)
+		{
+			document.getElementById(option.value).style.display = "none";
+		}
 		var value = selector.options[selector.selectedIndex].value;
 		var result = document.getElementById(value);
 		if(result.style.display == "none")
