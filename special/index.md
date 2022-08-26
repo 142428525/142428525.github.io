@@ -86,9 +86,9 @@ tags: test,啊,a
 			{
 				result.style.display = "block";
 			}
-			if(document.getElementById(option.value) != result)
+			if(document.getElementById(selector.options[option].value) != result)
 			{
-				document.getElementById(option.value).style.display = "none";
+				document.getElementById(selector.options[option].value).style.display = "none";
 			}
 		}
 	},1000);
