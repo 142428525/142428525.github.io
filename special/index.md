@@ -1,7 +1,7 @@
 ---
 title: 特殊
 description: 此处不完全收录了一些对不完全所有页面进行的不完全自动统计
-tags: test
+tags: test,bill,baka
 ---
 点<a href="..">我</a>返回首页
 
@@ -99,12 +99,5 @@ tags: test
 		}
 	},100);
 </script>
-
-## 施工中
-筛选`page.tags`变量中存在test的页面。
-{% assign test_pages = site.pages | where_exp:"page","page.tags contains 'test'" %}
-{% for test_page in test_pages %}
-- [{{test_page.title}}]({{test_page.url}})
-{% endfor %}
 
 {% include tags_display.md %}
