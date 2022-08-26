@@ -61,6 +61,7 @@ tags: test
 	<select id="tags_select">
 		{% for tag in tag_list %}
 		<option value="{{tag}}">{{tag}}</option>
+		{% endfor %}
 	</select>
 </form>
 
