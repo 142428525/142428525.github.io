@@ -64,11 +64,13 @@ tags: test
 <script>
 	var selector = document.getElementById("tags_select");
 	var value = selector.options[selector.selectedIndex].value;
-	document.getElementById("text").innerHTML = value;
+	document.getElementById("text").innerHTML += value;
 </script>
 
-{% capture text %}
-<p id="text" style=""></p>
+<p id="text" style="">
+	{% capture text %}
+	
+</p>
 {% endcapture %}
 
 var:{{text}}
