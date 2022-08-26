@@ -69,9 +69,11 @@ tags: test,啊,a
 <div id="{{tag}}" style="display:none;">
 	<h2>{{tag}}</h2>
 		{% assign tag_pages = site.pages | where_exp: "page","page.tags contains tag" %}
+	<ul>
 		{% for tag_page in tag_pages %}
-	<a href="{{tag_page.url}}">{{tag_page.title}}</a>
+		<li><a href="{{tag_page.url}}">{{tag_page.title}}</a></li>
 		{% endfor %}
+	</ul>
 </div>
 	{% endunless %}
 {% endfor %}
