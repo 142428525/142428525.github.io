@@ -83,7 +83,7 @@ tags: test
 
 var:{{text}}
 
-{% assign tag_pages = site.pages | where_exp:"page","page.tags contains {{text}}" %}
+{% assign tag_pages = site.pages | where_exp:"page","page.tags contains text" %}
 {% for tag_page in tag_pages %}
 - [{{tag_page.title}}]({{tag_page.url}})
 {% endfor %}
