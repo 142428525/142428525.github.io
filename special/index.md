@@ -75,7 +75,7 @@ tags: test,啊,a
 <script>
 	var selector = document.getElementById("tags_select");
 	var value = selector.options[selector.selectedIndex].value;
-	document.getElementById(value).style.display = block;
+	document.getElementById(value).style.display = "block";
 </script>
 
 ## 施工中
