@@ -68,7 +68,7 @@ tags: test
 </script>
 
 {% capture text %}
-<p id="text" style="display:none;"></p>
+<p id="text" style=""></p>
 {% endcapture %}
 
 var:{{text}}
