@@ -1,7 +1,7 @@
 ---
 title: 特殊
 description: 此处不完全收录了一些对不完全所有页面进行的不完全自动统计
-tags: test 啊 a
+tags: test,啊,a
 ---
 点<a href="..">我</a>返回首页
 
@@ -61,18 +61,21 @@ tags: test 啊 a
 	</select>
 </form>
 
+{% for tag in tag_list %}
+	<div id="{{tag}}" style="display:none;">
+	## {{tag}}
+	{% assign tag_pages = site.pages | where_exp: "page","page.tags contains tag" %}
+	{% for tag_page in tag_pages %}
+	- [{{tag_page.title}}]({{tag_page.url}})
+	{% endfor %}
+	</div>
+{% endfor %}
+
 <script>
 	var selector = document.getElementById("tags_select");
 	var value = selector.options[selector.selectedIndex].value;
-	{% assign tags[3] = value %}
+	document.getElementById(value).style.display = block;
 </script>
-
-var:{{tag[3]}}
-
-{% assign tag_pages = site.pages | where_exp:"page","page.tags contains text" %}
-{% for tag_page in tag_pages %}
-- [{{tag_page.title}}]({{tag_page.url}})
-{% endfor %}
 
 ## 施工中
 筛选`page.tags`变量中存在test的页面。
