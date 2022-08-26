@@ -54,7 +54,7 @@ tags: test
 <form action="">
 	<select id="tags_select">
 		{% for tag in tag_list %}
-			{% if tag %}
+			{% unless tag == "" %}
 				<option value="{{tag}}">{{tag}}</option>
 			{% endif %}
 		{% endfor %}
