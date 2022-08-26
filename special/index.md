@@ -81,7 +81,7 @@ tags: test,啊,a
 	setInterval(
 	function s()
 	{
-		for(let i = 0; i < selector.length; i++)
+		for(let i = 1; i < selector.length; i++)
 		{
 			var value = selector.options[i].value;
 			var result = document.getElementById(value);
