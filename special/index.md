@@ -67,7 +67,7 @@ tags: test 啊 a
 	{% assign tags[3] = value %}
 </script>
 
-var:{{text}}
+var:{{tag[3]}}
 
 {% assign tag_pages = site.pages | where_exp:"page","page.tags contains text" %}
 {% for tag_page in tag_pages %}
