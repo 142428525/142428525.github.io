@@ -39,18 +39,23 @@ tags: test
 
 以下为自动生成列表。
 
+{% assgin temp_tag_list_list = "" %}
 {% for page in site.pages %}
-	{% assign temp_tag_list_list[{% increment num %}] = page.tags %}
+	{% assign page_tags_str = page.tags | array_to_sentence_string | append: "," %}
+	{% assign temp_tag_list_list = temp_tag_list_list | append: page_tags_str %}
 {% endfor %}
+{% assign temp_tag_list_list = temp_teg_list_list | split: "," %}
+{% assign tag_list = "" %}
 {% for temp_tag_list in temp_tag_list_list %}
 	{% for temp_tag in temp_tag_list %}
-		{% if tag_list contains temp_tag %}
-		{% else %}
-			{% assign tag_list[{% increment n %}] = temp_tag %}
-		{% endif %}
+		{% unless tag_list contains temp_tag %}
+			{% assign temp_tag_str = temp_tag | append: ","  %}
+			{% assign tag_list = tag_list | array_to_sentence_string | append: temp_tag_str %}
+			{% assign tag_list = tag_list | split: "," %}
+		{% endunless %}
 	{% endfor %}
 {% endfor %}
-{% assign tag_list = {{tag_list | sort}} %}
+{% assign tag_list = tag_list | sort %}
 
 <form action="">
 	<select id="tags_select">
