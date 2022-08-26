@@ -56,7 +56,7 @@ tags: test
 		{% for tag in tag_list %}
 			{% unless tag == "" %}
 				<option value="{{tag}}">{{tag}}</option>
-			{% endif %}
+			{% endunless %}
 		{% endfor %}
 	</select>
 </form>
