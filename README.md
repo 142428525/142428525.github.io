@@ -20,7 +20,7 @@
 ## `tags`变量
 为了方便`./special`抓取对应页面的列表，每个`site.pages`中的内容页面**必须**设置`tags`变量
 
-因此，未设置`layout`的页面必须手动包含`{% include tags_display.html %}`
+因此，未设置`layout`的页面必须手动包含`{% include tags_display.md %}`
 
 无序列表子节点表示填写时需带上父节点
 - `MGE`标记了`./MGE/`下的页面
