@@ -68,7 +68,7 @@ tags: test,啊,a
 	{% unless tag == "" %}
 <div id="{{tag}}" style="display:none;">
 	<h2>{{tag}}</h2>
-		{% assign tag_pages = site.pages | where_exp: "page","page.tags contains tag" | sort %}
+		{% assign tag_pages = site.pages | where_exp: "page","page.tags contains tag" %}
 	<ul>
 		{% for tag_page in tag_pages %}
 		<li><a href="{{tag_page.url}}">{{tag_page.title}}</a></li>
