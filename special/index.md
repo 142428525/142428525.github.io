@@ -1,7 +1,7 @@
 ---
 title: 特殊
 description: 此处不完全收录了一些对不完全所有页面进行的不完全自动统计
-tags: test
+tags: test 啊 a
 ---
 点<a href="..">我</a>返回首页
 
@@ -64,7 +64,7 @@ tags: test
 <script>
 	var selector = document.getElementById("tags_select");
 	var value = selector.options[selector.selectedIndex].value;
-	{% assign text = value %}
+	{% assign tags[3] = value %}
 </script>
 
 var:{{text}}
