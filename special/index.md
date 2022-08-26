@@ -107,4 +107,4 @@ tags: test
 - [{{test_page.title}}]({{test_page.url}})
 {% endfor %}
 
-{% include tags_display %}
+{% include tags_display.md %}
