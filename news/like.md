@@ -2,6 +2,7 @@
 layout: news
 title: 特辑
 a2: true
+copy: true
 ---
 <style>
 	p
