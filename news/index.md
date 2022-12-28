@@ -5,9 +5,9 @@ a1: true
 ---
 <p style="color:red;text-align:center;">
 	<big><big><big>
-		对在幕后挑起俄乌冲突的以美国为首的北约国家提出严正抗议！
+		对在幕后挑起俄乌冲突/塞尔维亚争端的以美国为首的北约国家提出严正抗议！
 		<br/>
-		A solemn protest to the NATO countries led by the USA who provoked the R.-U. conflict behind the scenes!
+		A solemn protest to the NATO countries led by the USA who provoked the R.-U. conflict/Serbian dispute behind the scenes!
 	</big></big></big>
 </p>
 
