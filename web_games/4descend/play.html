@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>4DESCEND</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body onresize="resize_callback()">
+    <div class="flex-container" id="interface">
+        <div class="flex-item delegated-size" id="side-A">
+            <div class="flex-stat-column">
+                <div class="flex-item">
+                    <h1>甲方</h1>
+                    <p id="side-A color"></p>
+                </div>
+                <div class="flex-item">
+                    <p>HP</p>
+                    <br>
+                    <p id="side-A HP"></p>
+                </div>
+                <div class="flex-item">
+                    <p>落子计时</p>
+                    <br>
+                    <p id="side-A timer">00:00</p>
+                </div>
+                <div class="flex-item">
+                    <p>DESCEND</p>
+                    <br>
+                    <p id="side-A descend">否</p>
+                </div>
+            </div>
+        </div>
+        <div class="flex-item grid-container" id="board"></div>
+        <div class="flex-item delegated-size" id="side-B">
+            <div class="flex-stat-column">
+                <div class="flex-item">
+                    <h1>乙方</h1>
+                    <p id="side-B color"></p>
+                </div>
+                <div class="flex-item">
+                    <p>HP</p>
+                    <br>
+                    <p id="side-B HP"></p>
+                </div>
+                <div class="flex-item">
+                    <p>落子计时</p>
+                    <br>
+                    <p id="side-B timer">00:00</p>
+                </div>
+                <div class="flex-item">
+                    <p>DESCEND</p>
+                    <br>
+                    <p id="side-B descend">否</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- debug log -->
+        <div class="flex-item" id="logger" style="width: 100%;"></div>
+    </div>
+    <script src="game.js"></script>
+</body>
+
+</html>

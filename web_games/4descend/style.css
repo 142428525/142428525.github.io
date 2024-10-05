@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*no default*/
+}
+
+:root {
+    --whitespace: 1vmin;
+}
+
+body {
+    min-height: 100vh;
+}
+
+#interface {
+    background-color: lightgrey;
+}
+
+[id="side-A\ HP"], [id="side-B\ HP"] {
+    min-width: 10em;
+    max-width: 15vmin;
+    word-wrap: break-word;
+    color: red;
+}
+
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    /*background-color: lightgrey;*/
+}
+
+.flex-stat-column {
+    display: flex;
+    flex-wrap: wrap;
+    padding: var(--whitespace);
+}
+
+.flex-item {
+    background-color: cyan;
+    /*border: 1px solid;*/
+}
+
+.delegated-size {
+    background-color: cornflowerblue;
+    width: max(0px, calc(40vw - 50vmin));
+    margin: var(--whitespace);
+}
+
+.flex-stat-column * {
+    margin: auto var(--whitespace);
+    display: inline-block;
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    /*grid-template-columns: auto * N by js;*/
+    grid-gap: calc(var(--whitespace) / 2);
+    background-color: #66CCFF;
+    --len: calc(100vmin - 2 * var(--whitespace));
+    width: var(--len);
+    height: var(--len);
+    padding: var(--whitespace);
+    margin: var(--whitespace);
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    /*border: calc(var(--whitespace) / 4) solid rgba(0, 0, 0, 0.8);*/
+    /*font-size: 30px;*/
+    text-align: center;
+    overflow: auto;
+}
+
+.check-contents {
+    position: relative;
+    /*绝对定位元素容器*/
+    width: 100%;
+    height: 100%;
+}
+
+.check-content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}

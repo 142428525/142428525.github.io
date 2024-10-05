@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>4DESCEND</title>
+        <meta charset="utf-8"/>
+        <style>
+            body {
+                margin: auto;
+                width: 50%;
+            }
+
+            h1, h3, p {
+                text-align: center;
+            }
+
+            input[type="submit"] {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>4DESCEND</h1>
+        <p>4ASCEND的网页复刻版本，离线可玩。单设备双人游戏。</p>
+        <h3>设置</h3>
+        <form name="setting" action="./play.html" onsubmit="return secure()" method="get">
+            <ul>
+                <li>
+                    棋盘尺寸：
+                    <input type="number" name="size" min="4" placeholder=">=4">
+                    <ul>
+                        <li>默认为9。不要开太大哦。</li>
+                    </ul>
+                </li>
+                <li>
+                    初始生命值：
+                    <input type="number" name="hp_max" min="1" placeholder=">=1">
+                    <ul>
+                        <li>默认为6。不要开太大哦。</li>
+                    </ul>
+                </li>
+            </ul>
+            <input type="submit" value="开始DESCEND吧！！！">
+        </form>
+        <script>
+            function secure()
+            {
+                let form = document.forms["setting"];
+                
+                if (form["hp_max"]) {
+                    //return false;
+                }
+
+                return true;
+            }
+        </script>
+    </body>
+</html>
