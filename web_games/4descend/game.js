@@ -226,9 +226,11 @@ class Players
         return !this._descend_queue.is_empty() && this._descend_queue.head().pieces.includes(l_check);
     }
     
-    interrupt_descend(dsubject)
+    interrupt_descend(dsubject, except_l_check)
     {
-        this._descend_queue.tail().is_interrupted = true;
+        let info = this._descend_queue.tail();
+        info.is_interrupted = true;
+        info.pieces.splice(info.pieces.indexOf(except_l_check), 1); //delete it
         this.access_inv(dsubject).get_r_descend().innerHTML = "断";
 
         let tmp = this;
@@ -547,7 +549,7 @@ function check_click_callback(check, l_check)
     
     if (PLAYERS.can_interrupt_descend(l_check))
     {
-        PLAYERS.interrupt_descend(current_emplacer);
+        PLAYERS.interrupt_descend(current_emplacer, l_check);
     }
 
     if (is_descending)
